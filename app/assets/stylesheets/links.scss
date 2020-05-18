@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+body{
+  padding:0;
+  margin:0;
+  background:#eee;
+}
+
+// header
+
+header {
+  height: 70px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.632);
+  position :fixed;
+  top: 0;
+  z-index: 1;
+} 
+
+// 検索
+
+.search_container {
+  box-sizing: border-box;
+  text-align: left;
+  padding: 18px 0 0 25px;
+}
+.search_container input[type="text"] {
+  border: 1px solid rgb(113, 113, 113);
+  padding: 3px 18px;
+  border-radius: 14px;
+  height: 25px;
+  width: 250px;
+  outline: none;
+  position: relative;
+}
+.search_container input[type="submit"] {
+  position: absolute;
+  top: 26px;
+  left: 285px;
+  cursor: pointer;
+  visibility: hidden;
+}
+.search-icon{
+  position: absolute;
+  top: 25px;
+  left: 285px;
+  cursor: pointer;
+}
+
+// book-list
+
+.book-icon{
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  font-size: 30px !important;
+  cursor: pointer;
+
+}
+.book-icon::after{
+  content: "book";
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 34px;
+  right: -6px;
+  cursor: pointer;
+
+}
+
+// tab
+.content-center{
+
+}
+.tabs{
+  width:70%;
+  margin: 200px auto;
+  position:relative;
+}
+.tab-buttons span{
+  font:400 14px 'open sans',sans-serif;
+  color:#333;
+  background: #fff;
+  cursor:pointer;
+  border-bottom:2px solid #ddd;
+  display:block;
+  width:33.3%;
+  float:left;
+  text-align:center;
+  height:40px;
+  line-height:40px;
+}
+.tab-content{
+  border-bottom:3px solid #ddd;
+  padding:15px;
+  background:#fff;
+  display:inline-block;
+  font:400 13px 'open sans',sans-serif;
+  color:#333;
+}
+
+// 下のアンダーバー
+
+#lamp{
+  width:33.3%;
+  height:2px;
+  background:rgb(157, 157, 157);
+  display:block;
+  position:absolute;
+  top:40px;
+// 動きを滑らかにするゆっくり始まる
+  transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+}
+#lamp.content1{
+  left:0;
+  transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+}
+#lamp.content2{
+  left:33.3%;
+  transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+}
+#lamp.content3{
+  left:66.6%;
+  transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+}
+

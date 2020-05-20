@@ -1,11 +1,28 @@
 <header>
+
   <form method="get" action="#" class="search_container">
-  <input type="text" size="25" placeholder="キーワード検索">
-  <i class="fa fa-search search-icon"><input type="submit" value="&#xf002"></i>
+    <input type="text" size="25" placeholder="キーワード検索">
+    <i class="fa fa-search search-icon"><input type="submit" value="&#xf002"></i>
   </form>
-  <i class="fa fa-bookmark book-icon"></i>
+
+  <%= link_to "#" do%>
+    <i class="fa fa-bookmark book-icon"></i>
+  <% end %>
+
 </header>
 <div class='content-center'>
+
+  <table class="table side-bar">
+    <tr>
+      <th class="tag-list">TAG LIST</th>
+    </tr>
+    <tr>
+    	<%# @.each do || %>
+        <td class="tag-name">研修</td>
+      <%# end %>
+    </tr>
+	</table>
+
   <div class='tabs'>
     <div class='tab-buttons'>
       <span class='content1'>S1</span>
@@ -15,10 +32,52 @@
     </div>
     <div class='tab-content'>
       
-      <div id="tab1" class='content1'>This is the content of 1 container.This will be open when button 1 is clicked.This is the content of 1 container.This will be open when button 1 is clicked.This is the content of 1 container.This will be open when button 1 is clicked.</div>
-      <div id="tab2" class='content2'>This is the content of 2 container.This will be open when button 2 is clicked.This is the content of 2 container.This will be open when button 2 is clicked.This is the content of 2 container.This will be open when button 2 is clicked.</div>
-      <div id="tab3" class='content3'>This is the content of 3 container.This will be open when button 3 is clicked.This is the content of 3 container.This will be open when button 3 is clicked.This is the content of 3 container.This will be open when button 3 is clicked.</div>
-      
+      <div id="tab1" class='content1'>
+        <div class='link-page'>
+          <div class="link-box">
+            <%= image_tag 's.png', size: '40x40', class: "link-img" %>
+            <p class="link-title">タイトル</p>
+          </div>
+          <div class="link-box">
+            <%= image_tag 's.png', size: '40x40', class: "link-img" %>
+            <p class="link-title">タイトル</p>
+          </div>
+          <div class="link-box">
+            <%= image_tag 's.png', size: '40x40', class: "link-img" %>
+            <p class="link-title">タイトル</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab2" class='content2'>
+        <div class="link-box">
+          <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
+          <p class="link-title">タイトル</p>
+        </div>
+         <div class="link-box">
+          <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
+          <p class="link-title">タイトル</p>
+        </div>
+        <div class="link-box">
+          <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
+          <p class="link-title">タイトル</p>
+        </div>
+      </div>
+
+      <div id="tab3" class='content3'>
+        <div class="link-box">
+          <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
+          <p class="link-title">タイトル</p>
+        </div>
+        <div class="link-box">
+          <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
+          <p class="link-title">タイトル</p>
+        </div>
+        <div class="link-box">
+          <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
+          <p class="link-title">タイトル</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

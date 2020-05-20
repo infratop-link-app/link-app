@@ -1,0 +1,49 @@
+<h2>タグの作成</h2>
+<%= form_with model: @tag do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit '作成', class: 'create_button' %>
+<% end %>
+
+<p>タグ一覧</p>
+<% @tags.each_with_index do |tag, i| %>   
+    <%= form_with model: tag do |f| %>
+        <span id="tag_id_<%= i %>"><%= tag.name %></span>
+        <%= f.text_field :name, id: "name_id_#{i}", class: 'name_field' %>
+        <button type='button' class="id_<%= i %>" id="edit_id_<%= i %>">編集</button>
+        <%= link_to '削除', tag_path(tag), method: :delete, data: { confirm: "このタグを削除しますか？" }, id: "delete_id_#{i}" %>
+        <%= f.submit '更新', class: "id_#{i}", id: "update_id_#{i}" %>
+        <button type='button' id="back_id_<%= i %>" class="back_button">戻る</button>
+    <% end %>       
+<% end %>
+
+<style>
+
+.create_button {
+    display: inline-block !important;
+}
+
+.name_field, .back_button, input[type="submit"] {
+    display: none;
+}
+</style>
+
+<script>
+$(function () {
+    // functionがないとattrがうまくいかない
+    $("button, #tag_update").on("click", function () {
+        const id = $(this).attr("class")
+
+        // lengthで存在を確認
+        if ($(`#tag_${id}`).length) {
+            $(`#tag_${id}, #edit_${id}, #delete_${id}`).hide()
+            $(`#name_${id}, #update_${id}, #back_${id}`).show()
+            $(`#name_${id}`).focus()
+        }
+
+        $(`#back_${id}`).on("click", () => {
+            $(`#name_${id}, #update_${id}, #back_${id}`).hide()
+            $(`#tag_${id}, #edit_${id}, #delete_${id}`).show()
+        })
+    })
+})
+</script>

@@ -1,3 +1,136 @@
-// Place all the styles related to the tags controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  font-family: 'M PLUS 1p', sans-serif;
+}
+.tag_top{
+  margin: 50px 0;
+}
+
+.tag_title{
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.tag_content{
+  position: relative;
+  background: rgba(255, 226, 246, 0.287);
+  box-shadow: 0px 0px 0px 10px rgba(255, 227, 246, 0.287);
+  border: dashed 2px rgb(109, 107, 107);
+  padding: 0.2em 0.5em 30px 0.5em;
+  color: #454545;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.tag_list_title{
+  text-align: center;
+  margin: 20px 0;
+  letter-spacing: 1px;
+}
+
+.new_tag_box{
+  text-align: center;
+}
+.tag_text{
+  width: 300px;
+  height: 45px;
+  padding: 13px;
+  border-radius: 20px;
+}
+.tag_text:focus{
+  outline: none;
+}
+.create_button{
+  display: inline-block !important;
+  margin-left: 8px;
+  width: 60px;
+  border: 2px solid rgb(0, 204, 255);
+  font-size: 16px;
+  color: rgb(0, 204, 255);
+  font-weight: bold;
+  padding: 8px 0px;
+  border-radius: 8px;
+  transition: .5s;
+  background-color: rgb(0, 204, 255);
+  color: #FFF;
+  cursor: pointer;
+}
+.create_button:hover {
+  opacity: 0.6;
+}
+
+.tag_form{
+  display: flex;
+  justify-content: space-between;
+  margin: 8px auto 0;
+  border-bottom: 1px solid;
+  width: 400px;
+}
+
+.tag_name{
+  font-size: 20px;
+  margin-left: 12px;
+}
+
+.tag_delete{
+  font-size: 15px;
+  text-decoration: none;
+  padding: 4px 6px;
+  border: 1px solid rgb(255, 97, 97);
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgb(255, 97, 97);
+}
+.tag_delete:hover{
+  opacity: 0.7;
+}
+.right_button{
+  button{
+    font-size: 15px;
+    padding: 4px 6px;
+    border-radius: 8px;
+    background-color: rgb(106, 213, 97);
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
+  button:hover{
+    opacity: 0.7;
+  }
+  input[type="submit"]{
+    font-size: 15px;
+    text-decoration: none;
+    padding: 4px 6px;
+    border: 1px solid rgb(66, 103, 255);
+    border-radius: 8px;
+    color: #fff;
+    background-color: rgb(66, 103, 255);
+    outline: none;
+  }
+  input[type="submit"]:hover{
+    opacity: 0.7;
+  }
+}
+.back_button{
+  font-size: 15px;
+  text-decoration: none;
+  padding: 4px 6px;
+  border: 1px solid rgb(142, 142, 142);
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgb(142, 142, 142);
+}
+.back_button:hover{
+  opacity: 0.7;
+}
+.name_field{
+  width: 150px;
+  border-radius: 5px;
+  outline: none;
+  padding: 4px 15px;
+  margin: 0 0 5px 1px;
+}
+
+.name_field, .back_button, input[type="submit"] {
+  display: none;
+}

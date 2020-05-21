@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
 body{
   // background:#eee;
   font-family: 'Raleway', sans-serif;
@@ -10,6 +8,8 @@ body{
   padding:0;
   margin:0;
   box-sizing: border-box;
+  // ボタンのデフォルトを打ち消す
+  -webkit-appearance: none;
 }
 // header
 

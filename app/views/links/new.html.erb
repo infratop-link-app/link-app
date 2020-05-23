@@ -1,0 +1,14 @@
+<h2>新規投稿ページ</h2>
+<%= form_with model: @link do |f| %>
+    <%= f.label :タイトル %>
+    <%= f.text_field :title %>
+    <%= f.label :URL %>
+    <%= f.text_field :url %>
+    <%= f.label :ステータス %>
+    <%= f.select :status, Link.statuses.keys.to_a %>
+    <%= f.label :タグ %>
+    <%= f.collection_check_boxes :tag_ids, @tags, :id, :name, include_hidden: false do |t| %>
+        <%= t.label { t.check_box + t.text } %>
+    <% end %>
+    <%= f.submit '作成' %>
+<% end %>

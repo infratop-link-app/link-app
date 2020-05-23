@@ -1,196 +1,196 @@
-body{
-  // background:#eee;
-  font-family: 'Raleway', sans-serif;
-  background-image: url(dmm.png);
-  background-position: center;
+body {
+    // background:#eee;
+    font-family: "Raleway", sans-serif;
+    background-image: url(dmm.png);
+    background-position: center;
 }
-*{
-  padding:0;
-  margin:0;
-  box-sizing: border-box;
-  // ボタンのデフォルトを打ち消す
-  -webkit-appearance: none;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // ボタンのデフォルトを打ち消す
+    -webkit-appearance: none;
 }
 // header
 
 header {
-  height: 70px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.632);
-  position :fixed;
-  top: 0;
-  z-index: 1;
-} 
+    height: 70px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.632);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
 
 // 検索
 
 .search_container {
-  box-sizing: border-box;
-  text-align: left;
-  padding: 18px 0 0 25px;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 18px 0 0 25px;
 }
 .search_container input[type="text"] {
-  border: 1px solid rgb(113, 113, 113);
-  padding: 3px 18px;
-  border-radius: 14px;
-  height: 25px;
-  width: 250px;
-  outline: none;
-  position: relative;
-  box-sizing: content-box;
+    border: 1px solid rgb(113, 113, 113);
+    padding: 3px 18px;
+    border-radius: 14px;
+    height: 25px;
+    width: 250px;
+    outline: none;
+    position: relative;
+    box-sizing: content-box;
 }
 .search_container input[type="submit"] {
-  position: absolute;
-  left: -8px;
-  cursor: pointer;
-  visibility: hidden;
+    position: absolute;
+    left: -8px;
+    cursor: pointer;
+    visibility: hidden;
 }
-.search-icon{
-  position: absolute;
-  top: 25px;
-  left: 285px;
-  cursor: pointer;
+.search-icon {
+    position: absolute;
+    top: 25px;
+    left: 285px;
+    cursor: pointer;
 }
 
 // book-list
 
-.book-icon{
-  position: absolute;
-  top: 15px;
-  right: 40px;
-  font-size: 30px !important;
-  cursor: pointer;
-  color: gray;
+.book-icon {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    font-size: 30px !important;
+    cursor: pointer;
+    color: gray;
 }
 
-.book-icon::after{
-  content: "book";
-  font-size: 12px;
-  font-weight: bold;
-  position: absolute;
-  top: 34px;
-  right: -6px;
-  cursor: pointer;
-  color: gray;
+.book-icon::after {
+    content: "book";
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 34px;
+    right: -6px;
+    cursor: pointer;
+    color: gray;
 }
 
-.content-center{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 150px;
+.content-center {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
 }
 
 // tag
-table{
-  border-collapse: collapse;
-  width: 250px;
+table {
+    border-collapse: collapse;
+    width: 250px;
 }
-.side-bar{
-  border: 1px rgba(194, 194, 194, 0.808) solid;
-  margin: 0 30px;
+.side-bar {
+    border: 1px rgba(194, 194, 194, 0.808) solid;
+    margin: 0 30px;
 }
-.tag-list{
-  border-bottom: 1px solid #9b9999;
-  padding: 5px;
-  color: rgb(128, 128, 128);
-  background-color: rgba(255, 255, 255, 0.794);
-  letter-spacing: 1px;
-  font-weight: 100;
-
+.tag-list {
+    border-bottom: 1px solid #9b9999;
+    padding: 5px;
+    color: rgb(128, 128, 128);
+    background-color: rgba(255, 255, 255, 0.794);
+    letter-spacing: 1px;
+    font-weight: 100;
 }
-.tag-name{
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.609);
-  color: rgb(100, 100, 100);
-  font-family: 'M PLUS 1p', sans-serif;
+.tag-name {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.609);
+    color: rgb(100, 100, 100);
+    font-family: "M PLUS 1p", sans-serif;
 }
 
 // tab
-.tabs{
-  width:75%;
-  position:relative;
+.tabs {
+    width: 75%;
+    position: relative;
 }
-.tab-buttons span{
-  font:400 14px 'open sans',sans-serif;
-  color:#333;
-  background-color: rgba(255, 255, 255, 0.555);
-  cursor:pointer;
-  border-bottom:2px solid #ddd;
-  display:block;
-  width:33.3%;
-  float:left;
-  text-align:center;
-  height:40px;
-  line-height:40px;
+.tab-buttons span {
+    font: 400 14px "open sans", sans-serif;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.555);
+    cursor: pointer;
+    border-bottom: 2px solid #ddd;
+    display: block;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
 }
-.tab-content{
-  border-bottom:3px solid #ddd;
-  padding:15px;
-  display:inline-block;
-  font:400 13px 'open sans',sans-serif;
-  color:#333;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.555);
+.tab-content {
+    border-bottom: 3px solid #ddd;
+    padding: 15px;
+    display: inline-block;
+    font: 400 13px "open sans", sans-serif;
+    color: #333;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.555);
 }
 // tabのなかみ
 
-.link-box{
-  margin: 20px;
-  display: inline-block;
-  width: 200px;
-  height: 150px;
-  border-radius: 20px;
-  border: 1px solid rgba(176, 176, 176, 0.454);
-  background-color: #fff;
-  box-shadow: 2px 2px 4px gray;
-  cursor: pointer;
-
+.link-box {
+    margin: 20px;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    border: 1px solid rgba(176, 176, 176, 0.454);
+    background-color: #fff;
+    box-shadow: 2px 2px 4px gray;
+    cursor: pointer;
 }
 
-.link-img{
-  display: block;
-  margin: 50px auto 30px;
-
+.link-img {
+    display: block;
+    margin: 50px auto 30px;
 }
-.link-title{
-  margin-top: 5px;
-  font-family: 'M PLUS 1p', sans-serif;
-  text-align: center;
+.link-title {
+    margin-top: 5px;
+    font-family: "M PLUS 1p", sans-serif;
+    text-align: center;
 }
 // 下のアンダーバー
 
-#lamp{
-  width:33.3%;
-  height:2px;
-  background:rgb(157, 157, 157);
-  display:block;
-  position:absolute;
-  top:40px;
-// 動きを滑らかにするゆっくり始まる
-  transition: all .3s ease-in;
--o-transition: all .3s ease-in;
--webkit-transition: all .3s ease-in;
--moz-transition: all .3s ease-in;
+#lamp {
+    width: 33.3%;
+    height: 2px;
+    background: rgb(157, 157, 157);
+    display: block;
+    position: absolute;
+    top: 40px;
+    // 動きを滑らかにするゆっくり始まる
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
 }
-#lamp.content1{
-  left:0;
-  transition: all .3s ease-in;
--o-transition: all .3s ease-in;
--webkit-transition: all .3s ease-in;
--moz-transition: all .3s ease-in;
+#lamp.content1 {
+    left: 0;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
 }
-#lamp.content2{
-  left:33.3%;
-  transition: all .3s ease-in;
--o-transition: all .3s ease-in;
--webkit-transition: all .3s ease-in;
--moz-transition: all .3s ease-in;
+#lamp.content2 {
+    left: 33.3%;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
 }
-#lamp.content3{
-  left:66.6%;
-  transition: all .3s ease-in;
--o-transition: all .3s ease-in;
--webkit-transition: all .3s ease-in;
--moz-transition: all .3s ease-in;
+#lamp.content3 {
+    left: 66.6%;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
 }
 
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+}

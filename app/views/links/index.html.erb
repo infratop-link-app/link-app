@@ -17,9 +17,9 @@
       <th class="tag-list">TAG LIST</th>
     </tr>
     <tr>
-    	<%# @.each do || %>
-        <td class="tag-name">研修</td>
-      <%# end %>
+    	<% @tags.each do |tag| %>
+        <td class="tag-name"><%= tag.name %></td><br>
+      <% end %>
     </tr>
 	</table>
 
@@ -30,54 +30,41 @@
       <span class='content3'>OJT</span>
       <div id='lamp' class='content1'></div>
     </div>
+
     <div class='tab-content'>
-      
       <div id="tab1" class='content1'>
-        <div class='link-page'>
+        <% @s1_links.each do |s1_link| %>
           <div class="link-box">
-            <%= image_tag 's.png', size: '40x40', class: "link-img" %>
-            <p class="link-title">タイトル</p>
+            <a href="<%= s1_link.url %>">
+              <%= image_tag 's.png', size: '40x40', class: "link-img" %>
+              <p class="link-title"><%= s1_link.title %></p>
+            </a>
           </div>
-          <div class="link-box">
-            <%= image_tag 's.png', size: '40x40', class: "link-img" %>
-            <p class="link-title">タイトル</p>
-          </div>
-          <div class="link-box">
-            <%= image_tag 's.png', size: '40x40', class: "link-img" %>
-            <p class="link-title">タイトル</p>
-          </div>
-        </div>
+        <% end %>
       </div>
 
       <div id="tab2" class='content2'>
-        <div class="link-box">
-          <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
-          <p class="link-title">タイトル</p>
-        </div>
-         <div class="link-box">
-          <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
-          <p class="link-title">タイトル</p>
-        </div>
-        <div class="link-box">
-          <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
-          <p class="link-title">タイトル</p>
-        </div>
+        <% @s2_links.each do |s2_link| %>
+          <div class="link-box">
+            <a href="<%= s2_link.url %>">
+              <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
+              <p class="link-title"><%= s2_link.title %></p>
+            </a>
+          </div>
+        <% end %>
       </div>
 
       <div id="tab3" class='content3'>
-        <div class="link-box">
-          <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
-          <p class="link-title">タイトル</p>
-        </div>
-        <div class="link-box">
-          <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
-          <p class="link-title">タイトル</p>
-        </div>
-        <div class="link-box">
-          <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
-          <p class="link-title">タイトル</p>
-        </div>
+        <% @ojt_links.each do |ojt_link| %>
+          <div class="link-box">
+            <a href="<%= ojt_link.url %>">
+              <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
+              <p class="link-title"><%= ojt_link.title %></p>
+            </a>
+          </div>
+        <% end %>
       </div>
+
     </div>
   </div>
 </div>

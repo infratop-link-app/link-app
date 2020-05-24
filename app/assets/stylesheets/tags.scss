@@ -11,15 +11,15 @@
     letter-spacing: 1px;
 }
 
-.tag_content {
-    position: relative;
-    background: rgba(255, 226, 246, 0.287);
-    box-shadow: 0px 0px 0px 10px rgba(255, 227, 246, 0.287);
-    border: dashed 2px rgb(109, 107, 107);
-    padding: 0.2em 0.5em 30px 0.5em;
-    color: #454545;
-    width: 600px;
-    margin: 0 auto;
+.tag_content{
+  position: relative;
+  background: rgba(255, 236, 249, 0.287);
+  box-shadow: 0px 0px 0px 10px rgba(255, 236, 249, 0.287);
+  border: dashed 2px rgb(109, 107, 107);
+  padding: 0.2em 0.5em 30px 0.5em;
+  color: #454545;
+  width: 600px;
+  margin: 0 auto;
 }
 
 .tag_list_title {
@@ -28,32 +28,33 @@
     letter-spacing: 1px;
 }
 
-.new_tag_box {
-    text-align: center;
+.new_tag_box{
+  text-align: center;
 }
-.tag_text {
-    width: 300px;
-    height: 45px;
-    padding: 13px;
-    border-radius: 20px;
+
+.tag_text{
+  width: 300px;
+  height: 45px;
+  padding: 0px 20px;
+  border-radius: 20px;
 }
-.tag_text:focus {
-    outline: none;
+.tag_text:focus{
+  outline: none;
 }
-.create_button {
-    display: inline-block !important;
-    margin-left: 8px;
-    width: 60px;
-    border: 2px solid rgb(0, 204, 255);
-    font-size: 16px;
-    color: rgb(0, 204, 255);
-    font-weight: bold;
-    padding: 8px 0px;
-    border-radius: 8px;
-    transition: 0.5s;
-    background-color: rgb(0, 204, 255);
-    color: #fff;
-    cursor: pointer;
+.create_button{
+  display: inline-block !important;
+  margin-left: 8px;
+  width: 60px;
+  border: 2px solid rgb(0, 204, 255);
+  font-size: 16px;
+  color: rgb(0, 204, 255);
+  font-weight: bold;
+  padding: 8px 0px;
+  border-radius: 8px;
+  transition: .5s;
+  background-color: rgb(0, 204, 255);
+  color: #FFF;
+  cursor: pointer;
 }
 .create_button:hover {
     opacity: 0.6;

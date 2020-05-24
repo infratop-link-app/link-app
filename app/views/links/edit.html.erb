@@ -1,14 +1,30 @@
-<h2>編集ページ</h2>
-<%= form_with model: @link do |f| %>
-    <%= f.label :タイトル %>
-    <%= f.text_field :title %>
-    <%= f.label :URL %>
-    <%= f.text_field :url %>
-    <%= f.label :ステータス %>
-    <%= f.select :status, Link.statuses.keys.to_a %>
-    <%= f.label :タグ %>
-    <%= f.collection_check_boxes :tag_ids, @tags, :id, :name, include_hidden: false do |t| %>
-        <%= t.label { t.check_box + t.text } %>
-    <% end %>
-    <%= f.submit '更新' %>
-<% end %>
+<div class="page_box">
+  <h2 class="page_title">編集ページ</h2>
+    <div class="new_box">
+      <%= form_with model: @link do |f| %>
+      
+      <div class="field_box">
+        <div class="field_title">
+          <%= f.label :タイトル, class: "label_font"%>
+        </div>
+        <%= f.text_field :title, class: 'post_field', placeholder: "(例) 研修について" %><br>
+        <div class="field_title">
+          <%= f.label :URL, class: "label_font" %>
+        </div>
+        <%= f.text_field :url, class: 'post_field', placeholder: "(例) https://www" %><br>
+        <%= f.label :ステータス, class: "label_font" %>
+        <div class="select_wrap">
+          <%= f.select :status, Link.statuses.keys.to_a, prompt: "選択してください", class: "selectbox" %><br>
+        </div>
+      </div>
+  
+      <div class= "link_tags">
+        <%= f.label :タグ, class: "label_font tag_label" %>
+        <%= f.collection_check_boxes :tag_ids, @tags, :id, :name, include_hidden: false do |t| %>
+          <%= t.label { t.check_box + t.text } %>
+        <% end %><br>
+      </div>
+        <%= f.submit '更新する', class: 'link_create_button' %>
+      <% end %>
+    </div>
+</div>

@@ -1,8 +1,8 @@
-<div class="tag_top">
-  <h2 class="tag_title">タグの作成</h2>
-    <div class="new_tag_box">
+<div class="page_top">
+  <h2 class="page_title">タグの作成</h2>
+    <div class="new_box">
       <%= form_with model: @tag do |f| %>
-        <%= f.text_field :name , class: 'tag_text' %>
+        <%= f.text_field :name , class: 'field_text' %>
         <%= f.submit '作成', class: 'create_button' %>
       <% end %>
     </div>

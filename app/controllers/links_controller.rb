@@ -4,6 +4,8 @@ class LinksController < ApplicationController
   def index
     @ojt_links =  Link.where(status: 'OJT')
     @s1_links = Link.where(status: 'S1')
+    @s2_links = Link.where(status: 'S2')
+    @tags = Tag.all
   end
   def new
     @link = Link.new
@@ -61,7 +63,7 @@ class LinksController < ApplicationController
   end
 
   def blue_index
-    @links = Link.where(status: 'S2')
+    # @links = Link.where(status: 'S2')
   end
 
   private

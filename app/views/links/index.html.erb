@@ -18,7 +18,9 @@
     </tr>
     <tr>
     	<% @tags.each do |tag| %>
-        <td class="tag-name"><%= tag.name %></td><br>
+        <td class="tag-name" data-id="<%= tag.id %>">
+          <%= link_to tag.name, links_path(id: tag.id), remote: true %>
+        </td><br>
       <% end %>
     </tr>
 	</table>
@@ -33,38 +35,18 @@
 
     <div class='tab-content'>
       <div id="tab1" class='content1'>
-        <% @s1_links.each do |s1_link| %>
-          <div class="link-box">
-            <a href="<%= s1_link.url %>">
-              <%= image_tag 's.png', size: '40x40', class: "link-img" %>
-              <p class="link-title"><%= s1_link.title %></p>
-            </a>
-          </div>
-        <% end %>
+        <%= render "s1", s1_links: @s1_links %>
       </div>
 
       <div id="tab2" class='content2'>
-        <% @s2_links.each do |s2_link| %>
-          <div class="link-box">
-            <a href="<%= s2_link.url %>">
-              <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
-              <p class="link-title"><%= s2_link.title %></p>
-            </a>
-          </div>
-        <% end %>
+        <%= render "s2", s2_links: @s2_links %>
+        
       </div>
 
       <div id="tab3" class='content3'>
-        <% @ojt_links.each do |ojt_link| %>
-          <div class="link-box">
-            <a href="<%= ojt_link.url %>">
-              <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
-              <p class="link-title"><%= ojt_link.title %></p>
-            </a>
-          </div>
-        <% end %>
+        <%= render "ojt", ojt_links: @ojt_links %>
+        
       </div>
-
     </div>
   </div>
 </div>

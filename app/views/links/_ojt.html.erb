@@ -1,0 +1,8 @@
+<% ojt_links.each do |ojt_link| %>
+    <div class="link-box">
+        <a href="<%= ojt_link.url %>">
+            <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
+            <p class="link-title"><%= ojt_link.title %></p>
+        </a>
+    </div>
+<% end %>

@@ -1,17 +1,38 @@
 <header>
-
   <form method="get" action="#" class="search_container">
     <input type="text" size="25" placeholder="キーワード検索">
     <i class="fa fa-search search-icon"><input type="submit" value="&#xf002"></i>
   </form>
 
-  <%= link_to "#" do%>
-    <i class="fa fa-bookmark book-icon"></i>
-  <% end %>
+  <div class='header_right'>
+    <%= link_to "#" do %>
+      <%= image_tag 'bookmark.png', size: '40x35', class: "book-icon" %>
+      <p class="book-icon-list">ブックリスト</p>
+    <% end %>
 
+<nav id="gnav">
+  <ul>
+    <li class="toggle">
+      <a href="">
+        <%= image_tag 'create.png', size: '35x25' %>
+        <span class="create-icon-list">作成</span>
+      </a>
+      <div class="menu">
+        <ul class="menu_inner">
+          <li><a href=""><%= link_to "タグ作成", new_tag_path %></a></li>
+        </ul>
+        <ul class="menu_inner">
+          <li><a href=""><%= link_to "リンク作成", new_link_path  %></a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+</div>
 </header>
-<div class='content-center'>
 
+<div class='page_content'>
+ <div class='content-center'>
   <table class="table side-bar">
     <tr>
       <th class="tag-list">TAG LIST</th>
@@ -25,27 +46,25 @@
     </tr>
 	</table>
 
-  <div class='tabs'>
+ 　<div class='tabs'>
     <div class='tab-buttons'>
       <span class='content1'>S1</span>
       <span class='content2'>S2</span>
       <span class='content3'>OJT</span>
       <div id='lamp' class='content1'></div>
-    </div>
-
-    <div class='tab-content'>
+   </div>
+      
+   <div class='tab-content'>
       <div id="tab1" class='content1'>
         <%= render "s1", s1_links: @s1_links %>
       </div>
-
-      <div id="tab2" class='content2'>
+     
+     　<div id="tab2" class='content2'>
         <%= render "s2", s2_links: @s2_links %>
-        
       </div>
-
+     
       <div id="tab3" class='content3'>
         <%= render "ojt", ojt_links: @ojt_links %>
-        
       </div>
     </div>
   </div>

@@ -29,7 +29,7 @@ class LinksController < ApplicationController
           tag_link.save
         end
       end
-      redirect_to new_link_path
+      redirect_to links_path
     else
       @tags = Tag.all
       render :new
@@ -58,7 +58,7 @@ class LinksController < ApplicationController
       array.each do |tl|
         TagLink.find_by(link_id: @link.id, tag_id: tl.to_i).destroy # tlが1, 2の時削除
       end
-      redirect_to new_link_path
+      redirect_to links_path
     else
       render :edit
     end

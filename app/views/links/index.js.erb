@@ -1,0 +1,9 @@
+if($("#lamp").attr("class") == "content1") {
+    $("#tab1").html("<%= j(render "links/s1", s1_links: @s1_links ) %>")
+} else if($("#lamp").attr("class") == "content2") {
+    $("#tab2").html("<%= j(render "links/s2", s2_links: @s2_links ) %>")
+} else if($("#lamp").attr("class") == "content3") {
+    $("#tab3").html("<%= j(render "links/ojt", ojt_links: @ojt_links ) %>")
+} else {
+    console.log("error")
+}

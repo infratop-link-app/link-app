@@ -1,0 +1,8 @@
+<% s2_links.each do |s2_link| %>
+    <div class="link-box">
+        <a href="<%= s2_link.url %>">
+            <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
+            <p class="link-title"><%= s2_link.title %></p>
+        </a>
+    </div>
+<% end %>

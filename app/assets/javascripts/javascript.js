@@ -1,8 +1,8 @@
-$(document).on('turbolinks:load',function () {
+$(document).on("turbolinks:load", function () {
     $(".tab-content > div").not("#tab1").hide()
     // .not()で除外
     $(".tab-buttons span").click(function () {
-        var thisclass = $(this).attr("class")
+        let thisclass = $(this).attr("class")
         // 上記だとthisにあるclassを取得する
         $("#lamp").removeClass().addClass(thisclass)
         $(".tab-content>div").each(function () {

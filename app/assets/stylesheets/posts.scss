@@ -3,9 +3,8 @@
   background-color: rgba(255, 255, 255, 0.516);
   width: 700px;
   height: 500px;
-  margin: 100px auto;
+  margin: 100px auto 10px;
   padding: 25px;
-
 }
 
 .field_title{
@@ -74,7 +73,7 @@
   cursor: pointer;
   letter-spacing: 2px;
 }
-.create_button:hover {
+.link_create_button:hover {
     opacity: 0.6;
 }
 

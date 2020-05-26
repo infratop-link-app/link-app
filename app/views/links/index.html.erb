@@ -1,70 +1,115 @@
 <header>
-
   <form method="get" action="#" class="search_container">
     <input type="text" size="25" placeholder="キーワード検索">
     <i class="fa fa-search search-icon"><input type="submit" value="&#xf002"></i>
   </form>
 
-  <%= link_to "#" do%>
-    <i class="fa fa-bookmark book-icon"></i>
-  <% end %>
+  <div class='header_right'>
+    <%= link_to "#" do %>
+      <%= image_tag 'bookmark.png', size: '40x35', class: "book-icon" %>
+      <p class="book-icon-list">ブックリスト</p>
+    <% end %>
 
+<nav id="gnav">
+  <ul>
+    <li class="toggle">
+      <a href="">
+        <%= image_tag 'create.png', size: '35x25' %>
+        <span class="create-icon-list">作成</span>
+      </a>
+      <div class="menu">
+        <ul class="menu_inner">
+          <li><a href=""><%= link_to "タグ作成", new_tag_path %></a></li>
+        </ul>
+        <ul class="menu_inner">
+          <li><a href=""><%= link_to "リンク作成", new_link_path  %></a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+  </div>
 </header>
-<div class='content-center'>
 
-  <table class="table side-bar">
-    <tr>
-      <th class="tag-list">TAG LIST</th>
-    </tr>
-    <tr>
-    	<% @tags.each do |tag| %>
-        <td class="tag-name"><%= tag.name %></td><br>
-      <% end %>
-    </tr>
-	</table>
-
-  <div class='tabs'>
-    <div class='tab-buttons'>
-      <span class='content1'>S1</span>
-      <span class='content2'>S2</span>
-      <span class='content3'>OJT</span>
-      <div id='lamp' class='content1'></div>
-    </div>
-
-    <div class='tab-content'>
-      <div id="tab1" class='content1'>
-        <% @s1_links.each do |s1_link| %>
-          <div class="link-box">
-            <a href="<%= s1_link.url %>">
-              <%= image_tag 's.png', size: '40x40', class: "link-img" %>
-              <p class="link-title"><%= s1_link.title %></p>
-            </a>
-          </div>
+<div class='page_content'>
+  <div class='content-center'>
+    <table class="table side-bar">
+      <tr>
+        <th class="tag-list">TAG LIST</th>
+      </tr>
+      <tr>
+      	<% @tags.each do |tag| %>
+          <td class="tag-name"><%= tag.name %></td><br>
         <% end %>
+      </tr>
+  	</table>
+  
+    <div class='tabs'>
+      <div class='tab-buttons'>
+        <span class='content1'>S1</span>
+        <span class='content2'>S2</span>
+        <span class='content3'>OJT</span>
+        <div id='lamp' class='content1'></div>
       </div>
+  
+      <div class='tab-content'>
+        <div id="tab1" class='content1'>
+          <% @s1_links.each do |s1_link| %>
+            <div class="link-box">
 
-      <div id="tab2" class='content2'>
-        <% @s2_links.each do |s2_link| %>
-          <div class="link-box">
-            <a href="<%= s2_link.url %>">
-              <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
-              <p class="link-title"><%= s2_link.title %></p>
-            </a>
-          </div>
-        <% end %>
+              <p class="icon_button">
+                <%= link_to edit_link_path(s1_link) do%>
+                  <i class="fa fa-edit"></i>
+                <% end %>
+              </p>
+
+              <a href="<%= s1_link.url %>">
+                <%= image_tag 's.png', size: '40x40', class: "link-img" %>
+                <p class="link-title"><%= s1_link.title %></p>
+              </a>
+              
+            </div>
+          <% end %>
+        </div>
+  
+        <div id="tab2" class='content2'>
+          <% @s2_links.each do |s2_link| %>
+            <div class="link-box">
+
+              <p class="icon_button">
+                <%= link_to edit_link_path(s2_link) do%>
+                  <i class="fa fa-edit"></i>
+                <% end %>
+              </p>
+
+              <a href="<%= s2_link.url %>">
+                <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
+                <p class="link-title"><%= s2_link.title %></p>
+              </a>
+            </div>
+          <% end %>
+        </div>
+  
+        <div id="tab3" class='content3'>
+          <% @ojt_links.each do |ojt_link| %>
+            <div class="link-box">
+
+                <p class="icon_button">
+                <%= link_to edit_link_path(ojt_link) do%>
+                  <i class="fa fa-edit"></i>
+                <% end %>
+              </p>
+              
+              <a href="<%= ojt_link.url %>">
+                <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
+                <p class="link-title"><%= ojt_link.title %></p>
+              </a>
+            </div>
+          <% end %>
+        </div>
+  
       </div>
-
-      <div id="tab3" class='content3'>
-        <% @ojt_links.each do |ojt_link| %>
-          <div class="link-box">
-            <a href="<%= ojt_link.url %>">
-              <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
-              <p class="link-title"><%= ojt_link.title %></p>
-            </a>
-          </div>
-        <% end %>
-      </div>
-
     </div>
   </div>
 </div>

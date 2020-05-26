@@ -10,43 +10,43 @@
       <p class="book-icon-list">ブックリスト</p>
     <% end %>
 
-<nav id="gnav">
-  <ul>
-    <li class="toggle">
-      <a href="">
-        <%= image_tag 'create.png', size: '35x25' %>
-        <span class="create-icon-list">作成</span>
-      </a>
-      <div class="menu">
-        <ul class="menu_inner">
-          <li><a href=""><%= link_to "タグ作成", new_tag_path %></a></li>
-        </ul>
-        <ul class="menu_inner">
-          <li><a href=""><%= link_to "リンク作成", new_link_path  %></a></li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-</nav>
-</div>
+    <nav id="gnav">
+      <ul>
+        <li class="toggle">
+          <a href="">
+            <%= image_tag 'create.png', size: '35x25' %>
+            <span class="create-icon-list">作成</span>
+          </a>
+          <div class="menu">
+            <ul class="menu_inner">
+              <li><a href=""><%= link_to "タグ作成", new_tag_path %></a></li>
+            </ul>
+            <ul class="menu_inner">
+              <li><a href=""><%= link_to "リンク作成", new_link_path  %></a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <div class='page_content'>
- <div class='content-center'>
-  <table class="table side-bar">
-    <tr>
-      <th class="tag-list">TAG LIST</th>
-    </tr>
-    <tr>
-    	<% @tags.each do |tag| %>
-        <td class="tag-name" data-id="<%= tag.id %>">
-          <%= link_to tag.name, links_path(id: tag.id), remote: true %>
-        </td><br>
-      <% end %>
-    </tr>
-	</table>
+  <div class='content-center'>
+    <table class="table side-bar">
+      <tr>
+        <th class="tag-list">TAG LIST</th>
+      </tr>
+      <tr>
+      	<% @tags.each do |tag| %>
+          <td class="tag-name" data-id="<%= tag.id %>">
+            <%= link_to tag.name, links_path(id: tag.id), remote: true, class: "tag-text_name" %>
+          </td><br>
+        <% end %>
+      </tr>
+	  </table>
 
- 　<div class='tabs'>
+  <div class='tabs'>
     <div class='tab-buttons'>
       <span class='content1'>S1</span>
       <span class='content2'>S2</span>

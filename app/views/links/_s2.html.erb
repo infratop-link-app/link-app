@@ -1,5 +1,11 @@
 <% s2_links.each do |s2_link| %>
     <div class="link-box">
+        <p class="icon_button">
+            <%= link_to edit_link_path(s2_link) do%>
+                <i class="fa fa-edit"></i>
+            <% end %>
+        </p>
+
         <a href="<%= s2_link.url %>">
             <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
             <p class="link-title"><%= s2_link.title %></p>

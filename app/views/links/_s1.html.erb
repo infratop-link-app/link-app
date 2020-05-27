@@ -8,7 +8,8 @@
 
         <a href="<%= s1_link.url %>">
             <%= image_tag 's.png', size: '40x40', class: "link-img" %>
-            <p class="link-title"><%= s1_link.title %></p>
+            <p class="link-title"><%= s1_link.title %></p>    
         </a>
+        <span class="not_favorited" id="fav_<%= s1_link.id %>" data-id="<%= s1_link.id %>">Fav</span>
     </div>
 <% end %>

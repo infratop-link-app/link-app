@@ -10,5 +10,6 @@
             <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
             <p class="link-title"><%= s2_link.title %></p>
         </a>
+        <span class="not_favorited" id="fav_<%= s2_link.id %>" data-id="<%= s2_link.id %>">Fav</span>
     </div>
 <% end %>

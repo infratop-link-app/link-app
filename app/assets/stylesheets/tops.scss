@@ -46,9 +46,9 @@ header {
 
     & input[type="submit"] {
         position: absolute;
-        left: -8px;
+        left: -15px;
         cursor: pointer;
-        visibility: hidden;
+        opacity:0;
     }
 }
 

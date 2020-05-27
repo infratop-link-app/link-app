@@ -1,8 +1,8 @@
 <header>
-  <form method="get" action="#" class="search_container">
-    <input type="text" size="25" placeholder="キーワード検索">
-    <i class="fa fa-search search-icon"><input type="submit" value="&#xf002"></i>
-  </form>
+  <%= form_with url: links_path, method: :get, class: "search_container" do |f| %>
+    <%= f.text_field :search %>
+    <i class="fa fa-search search-icon"><%= f.submit 'Search', name: nil %></i>
+  <% end %>
 
   <div class='header_right'>
     <%= link_to "#" do %>

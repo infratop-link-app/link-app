@@ -31,6 +31,7 @@
   </div>
 </header>
 
+<<<<<<< Updated upstream
 <div class='page_content'>
   <div class='content-center'>
     <table class="table side-bar">
@@ -45,6 +46,20 @@
         <% end %>
       </tr>
 	  </table>
+=======
+  <table class="table side-bar">
+    <tr>
+      <th class="tag-list">TAG LIST</th>
+    </tr>
+    <tr>
+    	<% @tags.each do |tag| %>
+        <td class="tag-name" data-id="<%= tag.id %>">
+          <%= link_to tag.name, links_path(id: tag.id), remote: true %>
+        </td><br/>
+      <% end %>
+    </tr>
+	</table>
+>>>>>>> Stashed changes
 
   <div class='tabs'>
     <div class='tab-buttons'>

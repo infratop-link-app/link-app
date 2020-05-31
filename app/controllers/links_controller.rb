@@ -73,6 +73,9 @@ class LinksController < ApplicationController
     redirect_to new_link_path
   end
 
+  def list
+  end
+
   def blue_index
     # @links = Link.where(status: 'S2')
   end

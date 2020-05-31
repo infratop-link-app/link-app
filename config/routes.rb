@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'links#index'
   resources :links, except: [:show] do
     collection do
+      get :list
       get :blue_index
     end
   end

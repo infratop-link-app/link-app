@@ -169,14 +169,12 @@ table {
     color: rgb(128, 128, 128);
     background-color: rgba(255, 255, 255, 0.794);
     letter-spacing: 1px;
-    font-weight: 100;
     font-size: 18px;
 }
 .tag-name {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.609);
     color: rgb(100, 100, 100);
-    font-family: "M PLUS 1p", sans-serif;
     display: block;
     padding: 4px;
     border-bottom: 1px solid rgba(182, 182, 182, 0.746);
@@ -194,8 +192,7 @@ table {
     position:relative;
 }
 .tab-buttons span{
-    font:400 14px 'open sans',sans-serif;
-    color:#333;
+    color:rgb(92, 92, 92);
     background-color: rgba(255, 255, 255, 0.824);
     border-bottom:2px solid #ddd;
     display:block;
@@ -246,10 +243,13 @@ table {
     margin: 5px 18px 0 0;
     font-size: 18px;
     a{
-        color: rgb(117, 117, 117);
+        color: rgb(136, 136, 136);
     }
 }
 
+.book-mark-icon{
+    color: rgb(250, 108, 108);
+}
   // inkのスライドタブの下のアンダーバー
 
 #lamp {

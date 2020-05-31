@@ -4,12 +4,14 @@
             <%= link_to edit_link_path(ojt_link) do%>
                 <i class="fa fa-edit"></i>
             <% end %>
+            <span class="not_favorited" id="fav_<%= ojt_link.id %>" data-id="<%= ojt_link.id %>">
+                <i class="fa fa-bookmark-o book-mark-icon"></i>
+            </span>
         </p>
 
         <a href="<%= ojt_link.url %>">
             <%= image_tag 'ojt.png', size: '40x40', class: "link-img" %>
             <p class="link-title"><%= ojt_link.title %></p>
         </a>
-        <span class="not_favorited" id="fav_<%= ojt_link.id %>" data-id="<%= ojt_link.id %>">Fav</span>
     </div>
 <% end %>

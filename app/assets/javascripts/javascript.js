@@ -23,11 +23,12 @@ $(document).on("turbolinks:load", function () {
 
         for (let i = 0; i < array.length; i++) {
             dataId = array[i]["id"]
+            $(`#fav_${dataId} > i`).removeClass("fa-bookmark-o").addClass("fa-bookmark")
             $(`#fav_${dataId}`).removeClass().addClass("favorited")
         }
     }
 
-    $(".link-box > span").click(function () {
+    $(".icon_button > span").click(function () {
         if ($(this).attr("class") == "not_favorited") {
             let linkId = $(this).data("id")
             let url = $(this).prev("a").attr("href")
@@ -62,7 +63,7 @@ $(document).on("turbolinks:load", function () {
                 links_array.push(fav_links)
                 localStorage.setItem("fav_links", JSON.stringify(links_array))
             }
-
+            $(`#fav_${linkId} > i`).removeClass("fa-bookmark-o").addClass("fa-bookmark")
             $(this).removeClass().addClass("favorited")
         } else {
             let linkId = $(this).data("id")
@@ -75,7 +76,7 @@ $(document).on("turbolinks:load", function () {
             }
 
             localStorage.setItem("fav_links", JSON.stringify(links_array))
-
+            $(`#fav_${linkId} > i`).removeClass("fa-bookmark").addClass("fa-bookmark-o")
             $(this).removeClass().addClass("not_favorited")
         }
     })

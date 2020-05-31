@@ -4,12 +4,14 @@
             <%= link_to edit_link_path(s1_link) do%>
                 <i class="fa fa-edit"></i>
             <% end %>
+            <span class="not_favorited" id="fav_<%= s1_link.id %>" data-id="<%= s1_link.id %>">
+                <i class="fa fa-bookmark-o book-mark-icon"></i>
+            </span>
         </p>
 
         <a href="<%= s1_link.url %>">
             <%= image_tag 's.png', size: '40x40', class: "link-img" %>
             <p class="link-title"><%= s1_link.title %></p>    
         </a>
-        <span class="not_favorited" id="fav_<%= s1_link.id %>" data-id="<%= s1_link.id %>">Fav</span>
     </div>
 <% end %>

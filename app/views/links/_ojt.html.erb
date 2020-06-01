@@ -1,5 +1,5 @@
 <% ojt_links.each do |ojt_link| %>
-    <div class="link-box">
+    <div class="link-box" data-item_id="<%= ojt_link.id %>">
         <p class="icon_button">
             <%= link_to edit_link_path(ojt_link) do%>
                 <i class="fa fa-edit"></i>

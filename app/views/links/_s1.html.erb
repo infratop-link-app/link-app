@@ -1,5 +1,5 @@
 <% s1_links.each do |s1_link| %>
-    <div class="link-box">
+    <div class="link-box" data-item_id="<%= s1_link.id %>">
         <p class="icon_button">
             <%= link_to edit_link_path(s1_link) do%>
                 <i class="fa fa-edit"></i>

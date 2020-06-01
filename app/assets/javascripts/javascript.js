@@ -93,7 +93,7 @@ $(document).on("turbolinks:load", function () {
         let array = JSON.parse(localStorage.getItem("fav_links"))
         for (key in array) {
             $(".list-container").append(
-                `<li><a href="${array[key].url}">${array[key].title}</a></li>`
+                `<li class= "book_list" ><a href="${array[key].url}">${array[key].title}</a></li>`
             )
         }
     }

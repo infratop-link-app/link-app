@@ -1,0 +1,44 @@
+.list-container{
+  list-style: none;
+}
+
+
+.list-container{
+  counter-reset:li;
+  font: 14px/1.6 'arial narrow', sans-serif;
+  li{
+    position: relative;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 45px;
+    width: 500px;
+    margin: 10px auto 0;
+    border:dashed 1px #9FCDFF;
+  }
+  // 青色のbox
+  li:before{
+    counter-increment: li;
+    content: counter(li);
+    position: absolute;
+    left: -1px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: #9FCDFF;
+  }
+  a{
+    color: #000;
+  }
+  a:hover{
+    color: red;
+  }
+}
+
+
+
+

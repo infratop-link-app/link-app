@@ -111,7 +111,7 @@ $(function () {
             // ドラッグ中
             drag: function (e, ui) {
                 // ドラッグしている時は画面遷移しないように
-                $(this).children("a").attr("hred", "")
+                $(this).children("a").attr("href", "")
                 $(this).css({
                     height: "105px",
                     width: "105px",
@@ -140,13 +140,26 @@ $(function () {
             activeClass: "move-trash",
             drop: function (e, ui) {
                 e.preventDefault()
-                var deleteMessage = confirm("本当に削除しますか？")
+                let deleteMessage = confirm("本当に削除しますか？")
                 if (deleteMessage == true) {
                     //ドロップされた要素を取得。jQueryオブジェクトからDOM要素を取り出す
-                    var deleteItem = ui.draggable[0]
+                    let deleteItem = ui.draggable[0]
                     //idを取得。
-                    var deleteId = ui.draggable.data("item_id")
-                    var deleteUrl = "/links/" + deleteId
+                    let deleteId = ui.draggable.data("item_id")
+                    let deleteUrl = "/links/" + deleteId
+                    $.ajax({
+                        url: deleteUrl,
+                        type: "POST",
+                        data: { id: deleteId, _method: "DELETE" },
+                        dataType: "json",
+                    })
+                        .done(function (data) {
+                            deleteItem.remove()
+                            location.reload()
+                        })
+                        .fail(function () {
+                            alert("エラー")
+                        })
                 }
             },
         })

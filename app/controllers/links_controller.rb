@@ -70,7 +70,6 @@ class LinksController < ApplicationController
 
   def destroy
     @link.destroy
-    redirect_to new_link_path
   end
 
   def list

@@ -98,3 +98,57 @@ $(document).on("turbolinks:load", function () {
         }
     }
 })
+
+$(function () {
+    $(document).on("turbolinks:load", function () {
+        // link-boxクラスをドラッグ可能に
+        $(".link-box").draggable({
+            // カーソルの位置
+            cursorAt: { left: 85, top: 85 },
+            // ドラッグ終了時に元の場所に戻る設定
+            revert: true,
+            revertDuration: 1,
+            // ドラッグ中
+            drag: function (e, ui) {
+                // ドラッグしている時は画面遷移しないように
+                $(this).children("a").attr("hred", "")
+                $(this).css({
+                    height: "105px",
+                    width: "105px",
+                })
+                $(this).find("img").css({
+                    margin: "3px auto 5px",
+                })
+            },
+            // ドラッグ終了時
+            stop: function (e, ui) {
+                $(this).css({
+                    height: "",
+                    width: "",
+                })
+                $(this).find("img").css({
+                    margin: "",
+                })
+                // リロードしないとaタグのhref属性が元に戻らない
+                location.reload()
+            },
+        })
+        // link-boxクラスがtrash-boxクラスにドロップされた時にイベント発火
+        $(".trash-box").droppable({
+            tolerance: "touch",
+            // link-boxクラスがドラッグされている間trash-boxクラスにmove-trashクラスを付与
+            activeClass: "move-trash",
+            drop: function (e, ui) {
+                e.preventDefault()
+                var deleteMessage = confirm("本当に削除しますか？")
+                if (deleteMessage == true) {
+                    //ドロップされた要素を取得。jQueryオブジェクトからDOM要素を取り出す
+                    var deleteItem = ui.draggable[0]
+                    //idを取得。
+                    var deleteId = ui.draggable.data("item_id")
+                    var deleteUrl = "/links/" + deleteId
+                }
+            },
+        })
+    })
+})

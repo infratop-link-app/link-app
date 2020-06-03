@@ -145,7 +145,7 @@ header {
 // content
 
 .page_content{
-    margin-top: 150px;
+    margin-top: 140px;
 }
 
 .content-center {
@@ -279,5 +279,29 @@ table {
     -webkit-transition: all 0.3s ease-in;
 }
 
-
+  // ゴミ箱のアイコン
+.trash-box {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+    position: fixed;
+    background-image: url(stash1.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 63px;
+    height: 80px;
+}
+.move-trash {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+    position: fixed;
+    background-image: url(stash.png);
+    background-size: cover;
+    background-position: bottom;
+    height: 97px;
+    width: 63px;
+}
 

@@ -1,7 +1,6 @@
 $(document).on("turbolinks:load", function () {
     if (JSON.parse(localStorage.getItem("tab_content"))) {
         let tabContent = JSON.parse(localStorage.getItem("tab_content"))
-        console.log(tabContent)
         if (tabContent === "content1") {
             $("#lamp").removeClass().addClass(tabContent)
             // notで指定した要素以外を取得

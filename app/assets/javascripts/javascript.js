@@ -1,13 +1,34 @@
 $(document).on("turbolinks:load", function () {
-    $(".tab-content > div").not("#tab1").hide()
-    // .not()で除外
+    if (JSON.parse(localStorage.getItem("tab_content"))) {
+        let tabContent = JSON.parse(localStorage.getItem("tab_content"))
+        if (tabContent === "content1") {
+            $("#lamp").removeClass().addClass(tabContent)
+            // notで指定した要素以外を取得
+            $(".tab-content > div").not("#tab1").hide()
+        } else if (tabContent === "content2") {
+            $("#lamp").removeClass().addClass(tabContent)
+            $(".tab-content > div").not("#tab2").hide()
+        } else {
+            console.log("w")
+            $("#lamp").removeClass().addClass(tabContent)
+            $(".tab-content > div").not("#tab3").hide()
+        }
+    } else {
+        $("#lamp").removeClass().addClass("content1")
+    }
+
     $(".tab-buttons span").click(function () {
         let thisclass = $(this).attr("class")
         // 上記だとthisにあるclassを取得する
         $("#lamp").removeClass().addClass(thisclass)
-        $(".tab-content>div").each(function () {
+        // 選んだtab-contentをlocalStorageに保存
+        localStorage.setItem(
+            "tab_content",
+            JSON.stringify($("#lamp").attr("class"))
+        )
+        $(".tab-content > div").each(function () {
+            // 要素集合全てのうちから、引数に指定したクラスを持つ要素がひとつでもあればtrueを返す。
             if ($(this).hasClass(thisclass)) {
-                // 要素集合全てのうちから、引数に指定したクラスを持つ要素がひとつでもあればtrueを返す。
                 $(this).fadeIn(400)
             } else {
                 $(this).hide()
@@ -110,7 +131,6 @@ $(function () {
             revertDuration: 1,
             // ドラッグ中
             drag: function (e, ui) {
-                // ドラッグしている時は画面遷移しないように
                 $(this).children("a").attr("href", "")
                 $(this).css({
                     height: "105px",
@@ -129,10 +149,15 @@ $(function () {
                 $(this).find("img").css({
                     margin: "",
                 })
+                localStorage.setItem(
+                    "tab_content",
+                    JSON.stringify($("#lamp").attr("class"))
+                )
                 // リロードしないとaタグのhref属性が元に戻らない
                 location.reload()
             },
         })
+
         // link-boxクラスがtrash-boxクラスにドロップされた時にイベント発火
         $(".trash-box").droppable({
             tolerance: "touch",

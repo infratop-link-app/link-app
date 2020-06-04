@@ -9,7 +9,6 @@ $(document).on("turbolinks:load", function () {
             $("#lamp").removeClass().addClass(tabContent)
             $(".tab-content > div").not("#tab2").hide()
         } else {
-            console.log("w")
             $("#lamp").removeClass().addClass(tabContent)
             $(".tab-content > div").not("#tab3").hide()
         }
@@ -172,6 +171,19 @@ $(function () {
                     //idを取得。
                     let deleteId = ui.draggable.data("item_id")
                     let deleteUrl = "/links/" + deleteId
+                    let links_array = JSON.parse(
+                        localStorage.getItem("fav_links")
+                    )
+                    // お気に入り解除を押した要素のid(linkId)と配列中のオブジェクトのidが一致すれば、その要素を配列から削除
+                    for (let i = 0; i < links_array.length; i++) {
+                        if (links_array[i]["id"] === deleteId) {
+                            links_array.splice(i, 1)
+                        }
+                    }
+                    localStorage.setItem(
+                        "fav_links",
+                        JSON.stringify(links_array)
+                    )
                     $.ajax({
                         url: deleteUrl,
                         type: "POST",

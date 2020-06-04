@@ -179,8 +179,9 @@ $(function () {
                         dataType: "json",
                     })
                         .done(function (data) {
-                            deleteItem.remove()
                             location.reload()
+                            deleteItem.remove()
+                            
                         })
                         .fail(function () {
                             alert("エラー")

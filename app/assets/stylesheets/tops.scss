@@ -205,11 +205,19 @@ table {
 }
 .tab-content{
     padding:15px;
-    display:inline-block;
+    // display:inline-block;
     font:400 13px 'open sans',sans-serif;
     color:#333;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.555);
+}
+#tab1{
+    margin-top: 46px;
+}
+
+.lock_icon{
+    display: block;
+    margin: 0 0 auto 30px;
 }
 
   // linkのスライドタブのbox

@@ -16,6 +16,7 @@ class LinksController < ApplicationController
       @s1_links = Link.where(status: 'S1')
       @s2_links = Link.where(status: 'S2')
     end
+    gon.index_key = ENV['LOCK_PASSWORD']
   end
 
   def new
@@ -25,7 +26,7 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)
-    if @link.save
+    if @link.tag_ids.length > 0 && @link.save
       # チェックされたタグをストロングパラメータで配列で受け取り、eachで回す
       @link.tag_ids.each do |t|
         unless TagLink.find_by(link_id: @link.id, tag_id: t.to_i)
@@ -76,7 +77,6 @@ class LinksController < ApplicationController
   end
 
   def blue_index
-    # @links = Link.where(status: 'S2')
   end
 
   private

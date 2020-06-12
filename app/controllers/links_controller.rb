@@ -82,6 +82,7 @@ class LinksController < ApplicationController
 
   def blue_index
     @links = Link.where(status: "S2_ONLY")
+    gon.index_key = ENV['LOCK_PASSWORD']
   end
 
   private

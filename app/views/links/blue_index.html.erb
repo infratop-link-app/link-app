@@ -1,9 +1,28 @@
-<div class="page_box">
+<div class="blue_box">
   <h2 class="page_title">S2メンターのみ閲覧</h2>
-      
+    <% @links.each do |link| %>
+      <div class="link-box" data-item_id="<%= link.id %>">
+          <p class="icon_button">
+              <%= link_to edit_link_path(link) do %>
+                  <i class="fa fa-edit"></i>
+              <% end %>
+              <span class="not_favorited" id="fav_<%= link.id %>" data-id="<%= link.id %>">
+                  <i class="fa fa-bookmark-o book-mark-icon"></i>
+              </span>
+          </p>
+
+          <a href="<%= link.url %>">
+              <%= image_tag 's2.png', size: '40x40', class: "link-img" %>
+              <p class="link-title"><%= link.title %></p>
+          </a>
+      </div>
+    <% end %>
 </div>
 
 <div class= "back_page_link">
   <%= link_to "<< topページに戻る", root_path %>
 </div>
+
+<div class="trash-box"></div>
+
 

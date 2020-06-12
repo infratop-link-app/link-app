@@ -63,7 +63,11 @@ class LinksController < ApplicationController
       array.each do |tl|
         TagLink.find_by(link_id: @link.id, tag_id: tl.to_i).destroy # tlが1, 2の時削除
       end
-      redirect_to links_path
+      if @link.status == "S2_ONLY"
+        redirect_to blue_index_links_path
+      else
+        redirect_to links_path
+      end
     else
       render :edit
     end
@@ -77,6 +81,7 @@ class LinksController < ApplicationController
   end
 
   def blue_index
+    @links = Link.where(status: "S2_ONLY")
   end
 
   private

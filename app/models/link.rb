@@ -6,7 +6,7 @@ class Link < ApplicationRecord
     validates :url, presence: true
     validates :status, presence: true
 
-    enum status: { OJT: 0, S1: 1, S2: 2 }
+    enum status: { OJT: 0, S1: 1, S2: 2, S2_ONLY: 3 }
 
     def self.search_ojt(search)
         if search

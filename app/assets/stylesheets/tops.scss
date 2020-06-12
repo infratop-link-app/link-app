@@ -11,7 +11,7 @@ body {
     // ボタンのデフォルトを打ち消す
     -webkit-appearance: none;
 }
-a{
+a {
     text-decoration: none;
 }
 
@@ -26,7 +26,7 @@ header {
     z-index: 1;
 }
 
-  // 検索
+// 検索
 
 .search_container {
     box-sizing: border-box;
@@ -48,7 +48,7 @@ header {
         position: absolute;
         left: -15px;
         cursor: pointer;
-        opacity:0;
+        opacity: 0;
     }
 }
 
@@ -59,13 +59,13 @@ header {
     cursor: pointer;
 }
 
-  // headerの右側
+// headerの右側
 
-.header_right{
+.header_right {
     cursor: pointer;
 }
 
-  // ブックリスト
+// ブックリスト
 
 .book-icon {
     position: absolute;
@@ -73,7 +73,7 @@ header {
     right: 40px;
 }
 
-.book-icon-list{
+.book-icon-list {
     font-size: 10px;
     position: absolute;
     top: 48px;
@@ -81,30 +81,30 @@ header {
     color: grey;
 }
 
-  // 作成
+// 作成
 
-.create-icon-list{
+.create-icon-list {
     font-size: 8px;
     color: grey;
     text-align: center;
     display: block;
 }
 
-  // 作成のプルダウン
-#gnav > ul{
+// 作成のプルダウン
+#gnav > ul {
     > li {
         display: table-cell;
         &:hover {
             > a {
                 color: rgb(244, 8, 8);
             }
-            .menu{
+            .menu {
                 transition: max-height 1s ease;
                 max-height: 999px;
             }
         }
         > a {
-        // 作成のアイコン部分(鉛筆)
+            // 作成のアイコン部分(鉛筆)
             display: inline-block;
             position: absolute;
             top: 15px;
@@ -112,10 +112,10 @@ header {
         }
     }
     .menu {
-      // プルダウンした時の部分
-        transition: max-height .4s ease;
+        // プルダウンした時の部分
+        transition: max-height 0.4s ease;
         max-height: 0;
-        overflow: hidden;  // はみ出た部分を非表示にする
+        overflow: hidden; // はみ出た部分を非表示にする
         position: absolute;
         width: 110px;
         top: 67px;
@@ -133,9 +133,9 @@ header {
         a {
             color: #a4a4a4d7;
         }
-        ul:hover{
+        ul:hover {
             background-color: rgba(187, 187, 187, 0.571);
-            a{
+            a {
                 color: #fff;
             }
         }
@@ -144,7 +144,7 @@ header {
 
 // content
 
-.page_content{
+.page_content {
     margin-top: 140px;
 }
 
@@ -153,7 +153,7 @@ header {
     justify-content: space-between;
 }
 
-  // タグリスト
+// タグリスト
 
 table {
     border-collapse: collapse;
@@ -180,49 +180,49 @@ table {
     border-bottom: 1px solid rgba(182, 182, 182, 0.746);
 }
 
-.tag-text_name{
+.tag-text_name {
     font-size: 12px;
     color: grey;
 }
 
-  // linkのスライドタブ
+// linkのスライドタブ
 
-.tabs{
+.tabs {
     width: 80%;
-    position:relative;
+    position: relative;
 }
-.tab-buttons span{
-    color:rgb(92, 92, 92);
+.tab-buttons span {
+    color: rgb(92, 92, 92);
     background-color: rgba(255, 255, 255, 0.824);
-    border-bottom:2px solid #ddd;
-    display:block;
-    width:33.3%;
-    float:left;
-    text-align:center;
-    height:40px;
-    line-height:40px;
-    cursor:pointer;
+    border-bottom: 2px solid #ddd;
+    display: block;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
 }
-.tab-content{
-    padding:15px;
+.tab-content {
+    padding: 15px;
     // display:inline-block;
-    font:400 13px 'open sans',sans-serif;
-    color:#333;
+    font: 400 13px "open sans", sans-serif;
+    color: #333;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.555);
 }
-#tab1{
+#tab1 {
     margin-top: 46px;
 }
 
-.lock_icon{
+.lock_icon {
     display: block;
     margin: 0 0 auto 30px;
 }
 
-  // linkのスライドタブのbox
+// linkのスライドタブのbox
 
-.link-box{
+.link-box {
     margin: 20px 10px;
     display: inline-block;
     width: 340px;
@@ -233,7 +233,7 @@ table {
     box-shadow: 2px 2px 4px gray;
     cursor: pointer;
 }
-.link-img{
+.link-img {
     display: block;
     margin: 20px auto;
 }
@@ -244,21 +244,21 @@ table {
     color: rgb(121, 121, 121);
 }
 
-  // editのアイコン
+// editのアイコン
 
-.icon_button{
+.icon_button {
     text-align: right;
     margin: 5px 18px 0 0;
     font-size: 18px;
-    a{
+    a {
         color: rgb(136, 136, 136);
     }
 }
 
-.book-mark-icon{
+.book-mark-icon {
     color: rgb(250, 108, 108);
 }
-  // inkのスライドタブの下のアンダーバー
+// inkのスライドタブの下のアンダーバー
 
 #lamp {
     width: 33.3%;
@@ -287,7 +287,7 @@ table {
     -webkit-transition: all 0.3s ease-in;
 }
 
-  // ゴミ箱のアイコン
+// ゴミ箱のアイコン
 .trash-box {
     position: absolute;
     bottom: 50px;
@@ -312,4 +312,10 @@ table {
     height: 97px;
     width: 63px;
 }
-
+.blue_box {
+    border: 1px solid rgba(143, 143, 143, 0.618);
+    background-color: rgba(255, 255, 255, 0.516);
+    width: 780px;
+    margin: 100px auto 10px;
+    padding: 25px;
+}

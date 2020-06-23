@@ -1,7 +1,7 @@
 // 全体
 
 body {
-    background-image: url(dmm.png);
+    background-image: image-url("../images/dmm.png");
 }
 * {
     font-family: "M PLUS 1p", sans-serif;
@@ -294,7 +294,7 @@ table {
     right: 50px;
     z-index: 1000;
     position: fixed;
-    background-image: image-url("stash1.png");
+    background-image: image-url("../images/stash1.png");
     background-size: cover;
     background-position: bottom;
     width: 63px;
@@ -306,7 +306,7 @@ table {
     right: 50px;
     z-index: 1000;
     position: fixed;
-    background-image: image-url("stash.png");
+    background-image: image-url("../images/stash.png");
     background-size: cover;
     background-position: bottom;
     height: 97px;
